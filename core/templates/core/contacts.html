@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block navbar %}
+{% include 'fragments/navbar.html' %}
+{% endblock %}
+{% block meta_description %}
+    Доставка грузов по территории РФ, Контакты
+{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION-->
+    <section class="hero with-pattern py-5 bg-light">
+      <div class="container py-5 my-5">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center">
+            <p class="h6 text-uppercase text-primary">Наши контакты</p>
+            <h1>Мы рады всем клиентам</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+{% include 'fragments/contacts_fragment.html' %}
+{% endblock %}
+{% block footer %}
+{% include 'fragments/footer_fragment.html' %}
+{% endblock %}

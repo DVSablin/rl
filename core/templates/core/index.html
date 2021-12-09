@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block meta_description %}
+    Логистика транспорт  доставка грузов домашний переезд.
+{% endblock %}
+{% block meta_tags %}
+    Грузоперевозки, логистика, домашний переезд, транспортировка, по РФ.
+{% endblock %}
+{% block title %}
+    Реактивная логистика - доставка грузов по РФ.
+{% endblock %}
+{% block navbar %}
+    {% include 'fragments/navbar.html' %}
+
+
+{% endblock %}
+{% block content %}
+{% include 'fragments/hero_fragment.html' %}
+{% include 'fragments/process_fragment.html' %}
+{% endblock %}
+{% block footer %}
+    {% include 'fragments/footer_fragment.html' %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+{% endblock %}

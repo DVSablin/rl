@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{% block meta_description %}{% endblock meta_description %}">
+    <meta name="keywords" content="{% block meta_tags %}{% endblock %}" >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    {% include 'components/css.html' %}
+    {% block extra_css %}{% endblock extra_css %}
+</head>
+<body>
+    {% block navbar %}
+    {% endblock %}
+    {% block content %}{% endblock content %}
+
+
+    {% block footer %}
+    {% endblock %}
+    <!-- JS SCRIPTS-->
+    {% include 'components/js.html' %}
+    {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

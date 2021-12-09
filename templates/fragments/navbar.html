@@ -1,0 +1,29 @@
+{% load static%}
+<!-- NAVBAR-->
+<header class="header fixed-top header-animated">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+      <div class="container">
+
+          <a class="navbar-brand" href="index.html"><img src={% static "img/logo.png" %} alt="..." width="80"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!-- Link--><a class="nav-link {% if request.path == '/' %}active{% endif %}"  href={% url 'index' %}>Главная</a>
+            </li>
+            <li class="nav-item">
+              <!-- Link--><a class="nav-link {% if request.path == '/vacancy' %}active{% endif %}" href={% url 'vacancy' %}>Вакансии</a>
+            </li>
+
+            <li class="nav-item mr-2">
+              <!-- Link--><a class="nav-link {% if request.path == '/contacts' %}active{% endif %}" href={% url 'contacts' %}>Контакты</a>
+            </li>
+            <li class="nav-item">             
+              <button class="btn btn-primary" type="button" data-target="#quoteForm" data-toggle="modal">Оставить заявку</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  {% include 'fragments/order_modal.html' %}
